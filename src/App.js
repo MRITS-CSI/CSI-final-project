@@ -1,54 +1,24 @@
 import React from 'react'
-import csi from './csi.png'
+import {
+    BrowserRouter,
+    Routes,
+    Route
+  } from "react-router-dom";
+import Login from './Components/Login';
+import Success from './Components/Success';
 const App = () => {
-    return (
-        <>
-            
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-2"></div>
-            <div class="col-lg-6 col-md-8 login-box">
-                {/* <div class="col-lg-12 login-key">
-                    <i class="fa fa-key" aria-hidden="true"></i>
-                </div> */}
-                <img src={csi}  width="150px" height="150px" />
-                <div class="col-lg-12 login-title">
-                      Computer Society of India
-                </div>
+return (
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Login />}>
+      
+      </Route>
 
-                <div class="col-lg-12 login-form">
-                    <div class="col-lg-12 login-form">
-                        <form>
-                            <div class="form-group">
-                                <label class="form-control-label">TEAM ID</label>
-                                <input type="text" class="form-control"/>
-                            </div>
-                            <div class="form-group">
-                                <label class="form-control-label">PASSWORD</label>
-                                <input type="password" class="form-control" />
-                            </div>
-
-                            <div class="col-lg-12 loginbttm">
-                                <div class="col-lg-6 login-btm login-text">
-                                </div>
-                                <div class="col-lg-6 login-btm login-button">
-                                    <button type="submit" class="btn btn-outline-primary">LOGIN</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-2"></div>
-            </div>
-        </div>
-      </div>
-
-
-
-
-        </>
-    )
-}
+      <Route path="/success" element={<Success />}></Route>
+    </Routes>
+  </BrowserRouter>
+)
+   }
 
 
 
