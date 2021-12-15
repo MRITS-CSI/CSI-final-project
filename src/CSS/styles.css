@@ -1,0 +1,39 @@
+#canvas {
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	width: fit-content;
+	height: fit-content;
+}
+
+.contain {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 350px;
+}
+#video {
+	position: absolute;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.loading {
+	position: fixed;
+	top: 0;
+	left: 0;
+	opacity: 0.2;
+	background-color: #ffffff;
+}
+body {
+	background-image: url(/src/Images/bgimg.jpg);
+	background-position: 50%;
+	background-size: 500px;
+}
+.ui.container.segment {
+	background-color: rgba(255, 0, 0, 0);
+}
+h2.ui.center.aligned.icon.header {
+	color: white;
+}
