@@ -13,9 +13,11 @@ export const checkLogin = async (username, password) => {
 		});
 		if (data.status === 'Failed')
 			alert('Login Failed Please check your credentials');
-		if (data.status === 'ok') {
+		if (data.status === 'ok' && data.user.secondRound === true) {
 			window.sessionStorage.setItem('jwt', data.token);
 			window.location.pathname = '/AI';
+		} else {
+			alert('Login Failed !!! Please contact CSI Team');
 		}
 	} catch (e) {
 		console.log(e.message);
