@@ -29,7 +29,7 @@ export const checkToken = async (token) => {
 	//	console.log(token);
 	if (!token) return false;
 
-	let { data } = await axios.post('https://csimrits.tech/api/v1/login', {
+	let { data } = await axios.post('https://csimrits.tech/api/v1/login/check', {
 		jwt: token,
 	});
 
