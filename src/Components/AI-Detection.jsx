@@ -9,7 +9,7 @@ const AIDetection = () => {
 	useEffect(() => {
 		const init = async () => {
 			let data = await QuestionObject();
-			console.log(data);
+			//	console.log(data);
 			setQuestion(data);
 		};
 		init();
