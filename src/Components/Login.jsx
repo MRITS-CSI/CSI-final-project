@@ -54,6 +54,9 @@ const Login = () => {
 															'class',
 															'ui inverted blue loading button'
 														);
+													document
+														.getElementById(e.target.id)
+														.setAttribute('disabled', true);
 													e.preventDefault();
 
 													checkLogin(username, password);
