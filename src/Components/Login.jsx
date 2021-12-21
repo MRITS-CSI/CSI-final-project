@@ -45,8 +45,15 @@ const Login = () => {
 										<div className="col-lg-6 login-btm login-text"></div>
 										<div className="col-lg-6 login-btm login-button">
 											<button
+												id="loginbtn"
 												className="btn btn-outline-primary"
 												onClick={(e) => {
+													document
+														.getElementById(e.target.id)
+														.setAttribute(
+															'class',
+															'ui inverted blue loading button'
+														);
 													e.preventDefault();
 
 													checkLogin(username, password);
